@@ -2,11 +2,57 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Konstansok -->
+    <properties>
+        <!-- Saját gyártmány -->
+        <base.loggerVersion>1.7.5</base.loggerVersion>
+        <base.junitVersion>5.5.2</base.junitVersion>
+
+        <!-- Azért kell, mert a Maven már ezt igényli de a deffault az 1.5 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <!-- Alap adoatok beállítása -->
     <modelVersion>4.0.0</modelVersion>
+
+    <packaging>pom</packaging>
 
     <groupId>bsh.teaching</groupId>
     <artifactId>tavasz-multi</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <!-- Leszármazott modulok -->
+    <modules>
+        <module>logger</module>
+        <module>tavasz</module>
+        <module>annotation</module>
+    </modules>
+
+    <!-- Függőségek beállítása -->
+    <dependencies>
+
+        <!-- LOGGOLÁS -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${base.loggerVersion}</version>
+        </dependency>
+
+        <!-- TESZTELÉS -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${base.junitVersion}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- SPRING: Inversion Of Control -->
+
+        <!-- SPRING: Annotációk -->
+
+    </dependencies>
 
 
 </project>

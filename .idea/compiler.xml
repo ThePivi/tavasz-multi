@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tavasz-multi" />
+        <module name="annotation" />
+        <module name="logger" />
+        <module name="tavasz" />
       </profile>
     </annotationProcessing>
   </component>
